@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<context id="authorized-service">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://47.100.83.94:3306/medicine_dev?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8" userId="root" password="2Q51nt8oFk8NHTgj">
+			<property name="useInformationSchema" value="true" />
+		</jdbcConnection>
+
+		<javaModelGenerator targetPackage="com.artwook.nft.nftshop.db.model" targetProject="src/main/java" />
+		<sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources" />
+		<javaClientGenerator targetPackage="com.artwook.nft.nftshop.db.mapper" targetProject="src/main/java" type="XMLMAPPER" />
+
+		<table tableName="tb_user" domainObjectName="User">
+			<generatedKey column="id" sqlStatement="mysql" identity="true" />
+		</table>
+		<table tableName="tb_patient" domainObjectName="Patient">
+			<generatedKey column="id" sqlStatement="mysql" identity="true" />
+		</table>
+		<table tableName="tb_mx_record" domainObjectName="MxRecord">
+			<generatedKey column="id" sqlStatement="mysql" identity="true" />
+		</table>
+		<table tableName="tb_dictionary" domainObjectName="Dictionary">
+			<generatedKey column="id" sqlStatement="mysql" identity="true" />
+		</table>
+		<table tableName="tb_daily_record" domainObjectName="DailyRecord">
+			<generatedKey column="id" sqlStatement="mysql" identity="true" />
+		</table>
+		<table tableName="tb_pathology_record" domainObjectName="PathologyRecord">
+			<generatedKey column="id" sqlStatement="mysql" identity="true" />
+		</table>
+		<table tableName="tb_attachment" domainObjectName="Attachments">
+			<generatedKey column="id" sqlStatement="mysql" identity="true" />
+		</table>
+	</context>
+</generatorConfiguration>
